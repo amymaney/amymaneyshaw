@@ -1,14 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
 
+@font-face {
+    font-family: Telegraf;
+    src: url('Telegraf\ Regular\ 400.otf');
+}
+
+@font-face {
+    font-family: TelegrafBold;
+    src: url('Telegraf\ UltraBold\ 800.otf');
+}
+
+@font-face {
+    font-family: TelegrafLight;
+    src: url('Telegraf\ UltraLight\ 200.otf');
+}
+
 /* Variables */
 :root {
-  --font-family: "Roboto", sans-serf;
-  --normal-font: 400;
-  --bold-font: 700;
-  --bolder-font: 900;
+  --font-family: Telegraf, sans-serf;
+ 
   --bg-color: #fcfcfc;
-  --primary-color: #4756df;
-  --secondary-color: #ff7235;
+  --primary-color: #275AA6;
+  --secondary-color: #436292;
   --primary-shadow: #8b8eaf;
   --secondary-shadow: #a17a69;
   --bottom-margin: 0.5rem;
@@ -51,11 +64,40 @@ nav {
     top: 0;
     left: 0;
     z-index: 1;
+    height: 80px;
+
     /* z-index = 1 makes sure navbar is on top of other elements*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 3.5rem;
+    padding: 40px;
     background-color: var(--bg-color);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+divclass {
+    display: block;
+}
+
+nav h1 {
+    color: #1A3052;
+    font-family: TelegrafBold, sans-serif;
+    font-size: 30px;
+}
+
+nav a {
+    color: var(--secondary-color);
+}
+
+nav a:hover {
+    color: #397ADD;
+}
+
+nav ul {
+    display: flex;
+    gap: 4rem;
+}
+
+nav ul li {
+    font-family: Telegraf, sans-serif;
 }
